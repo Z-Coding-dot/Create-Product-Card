@@ -64,7 +64,7 @@ export default function NewProductForm() {
   const [isPolishingText, setIsPolishingText] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema) as any,
     defaultValues: {
       name: "",
       type: "product",
